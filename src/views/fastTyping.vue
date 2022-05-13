@@ -26,7 +26,7 @@
           <button
             class="w-full p-3 bg-sky-700 text-slate-50 font-bold"
             type="button"
-            @click="yenile()"
+            @click="yenile"
           >
             Yenile
           </button>
@@ -79,7 +79,7 @@
 import { reactive, watch, ref, onMounted } from "vue";
 import kelimeler from "../assets/data.json";
 const state = reactive({
-  kelime: [],
+  kelime: []
 });
 
 let isTrue = ref(1);
@@ -98,7 +98,7 @@ onMounted(() => {
 const writed = ref("");
 
 // watch
-watch(writed, (newV) => {
+watch(writed, newV => {
   if (isStarted) {
     let lastNew = newV.replace(" ", "");
     if (state.kelime[0].slice(0, newV.length) === lastNew) {
@@ -107,7 +107,9 @@ watch(writed, (newV) => {
       isTrue = 0;
     }
     classControl.value =
-      isTrue == 1 ? "rounded-md p-2 bg-green-100" : "rounded-md  p-2 bg-rose-600";
+      isTrue == 1
+        ? "rounded-md p-2 bg-green-100"
+        : "rounded-md  p-2 bg-rose-600";
     if (newV.indexOf(" ") !== -1) {
       isTrue == 1 ? trueCount.value++ : falseCount.value++;
       state.kelime.splice(0, 1);
@@ -148,8 +150,8 @@ const yenile = () => {
 
 <style scoped>
 .lead {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .cervceve {
