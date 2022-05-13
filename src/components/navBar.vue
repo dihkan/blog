@@ -1,0 +1,34 @@
+<template>
+  <div
+    class="bg-zinc-900 p-5 text-zinc-900 w-1/6 min-h-full flex-col divide-x-4 border-sky-50"
+  >
+    <div class="flex items-start justify-center w-full pt-2">
+      <img src="../assets/img/ihsan.jpeg" class="rounded-full w-48" alt="" />
+    </div>
+    <router-link to="/" tag="li" :class="linkClasses">
+      <a href="#" class="aClasses">
+        <font-awesome-icon icon="bars" class="mr-3" /> Ana Sayfa
+      </a></router-link
+    >
+    <router-link to="/fastTyping" :class="linkClasses">
+      <a href="#" class="aClasses">
+        <font-awesome-icon icon="dragon" class="mr-3"></font-awesome-icon>
+        Fast Typing</a
+      >
+    </router-link>
+    <router-link to="/currency" :class="linkClasses">
+      <a href="#" class="aClasses">
+        <font-awesome-icon icon="chart-area" class="mr-3"></font-awesome-icon>
+        Currency</a
+      >
+    </router-link>
+  </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+const linkClasses = ref("w-full bg-sky-700 inline-block p-3 mt-6 rounded-md");
+const aClasses = ref("mt-5  font-bold");
+</script>
+
+<style scoped></style>

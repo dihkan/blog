@@ -1,0 +1,11 @@
+body,
+html {
+    height: 100%;
+    background-color: rgba(113, 113, 122);
+}
+
+#app {
+    height: 100%;
+    filter: grayscale(50%);
+    font-family: "Fira Code";
+}
