@@ -7,18 +7,18 @@
     </div>
     <router-link to="/" tag="li" :class="linkClasses">
       <a href="#" class="aClasses">
-        <font-awesome-icon icon="bars" class="mr-3" /> Ana Sayfa
+        <el-icon size="20px"><HomeFilled /></el-icon> Ana Sayfa
       </a></router-link
     >
     <router-link to="/fastTyping" :class="linkClasses">
       <a href="#" class="aClasses">
-        <font-awesome-icon icon="dragon" class="mr-3"></font-awesome-icon>
+        <el-icon size="20px"><Promotion /></el-icon>
         Fast Typing</a
       >
     </router-link>
     <router-link to="/currency" :class="linkClasses">
       <a href="#" class="aClasses">
-        <font-awesome-icon icon="chart-area" class="mr-3"></font-awesome-icon>
+        <el-icon size="20px"><TrendCharts /></el-icon>
         Currency</a
       >
     </router-link>

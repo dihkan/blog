@@ -45,18 +45,17 @@
             </span>
           </div>
         </div>
-
         <div class="card">
           <div class="card-body bg-secondary">
             <div class="input-group input-group-lg flex my-10">
-              <input
-                type="text"
-                class="w-full block bg-zinc-200 py-3 px-3 rounded-md focus:outline-2"
-                placeholder="Start Typing"
+              <el-input
                 v-model="writed"
                 @keydown="isStarted != true ? startTimer() : ''"
                 @keydown.enter="bittiMi"
-              />
+                placeholder="Start Typing"
+                class="p-3 bg-zinc-500 rounded-md h-20 text-2xl"
+              ></el-input>
+
               <div class="input-group-append" id="button-addon4">
                 <button
                   class="w-20 bg-sky-700 h-full mx-2 text-white border-zinc-50 border-2 rounded-md"
